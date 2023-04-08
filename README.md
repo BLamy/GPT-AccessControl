@@ -1,6 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-![Next js ai starter](./nextjs-ai-starter.gif)
+![image](https://user-images.githubusercontent.com/324928/230745854-02ff5ac2-fe21-4e23-9ac9-2506b739aee5.png)
+![image](https://user-images.githubusercontent.com/324928/230745858-4a33e7f7-caa9-4549-bcee-2bd7e80eb7fa.png)
 
 ## Getting Started
 
