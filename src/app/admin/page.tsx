@@ -49,13 +49,28 @@ export default async function Admin({
     );
   }
   return (
-    <div>
+    <div className="w-full h-full flex flex-col justify-end">
       <Chat messages={messages} />
-      {prLink}
-      <form action="/admin" method="GET">
-        <input type="text" id="new" name="new" />
-        <button type="submit">Submit</button>
+      <form 
+          action="/admin"
+          method="GET"
+          className="flex justify-between items-center"
+        >
+        <input
+          id="new"
+          name="new"
+          type="text"
+          placeholder="Describe your rule change here..."
+          className="w-full px-4 py-2 border-2 border-gray-300 rounded-lg mr-2"
+        />
+        <button
+          type="submit"
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700"
+        >
+          Send
+        </button>
       </form>
+      {prLink}
     </div>
   );
 }
