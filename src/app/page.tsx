@@ -2,6 +2,7 @@ import * as VerificationPrompt from "@/ai/prompts/Verification.Prompt";
 import { ChatCompletionRequestMessage } from "openai";
 import { generateChatCompletion } from "@/lib/ChatCompletion";
 import Link from "next/link";
+import Chat from "@/components/Chat";
 
 // Force dynamic is required to use URLSearchParams 
 // otherwise it will cache my new rule since i'm sending it as a GET param 
@@ -33,20 +34,14 @@ export default async function Home({
     const res = await generateChatCompletion(messages);
 
     return (
-      <div className="container mx-auto min-h-screen-wrapper">
-        <h1 className="text-2xl font-bold">action: {action}</h1>
-        <p className="text-lg">Username: {username}</p>
-        <p className="text-lg">Role: {role}</p>
-        <p className="text-lg">Result: {JSON.stringify(res, null, 2)}</p>
-      </div>
+        <Chat messages={[...messages, { role: "assistant", content: JSON.stringify(res) }]} />
     );
   }
   const isInvalidUsername =
     "username" in searchParams && searchParams["username"] === "";
 
   return (
-    <div className="container mx-auto min-h-screen-wrapper">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="m-10 grid lg:grid-cols-2 grid-cols-1 gap-4">
         <div className="bg-white rounded-lg shadow-md p-6 text-gray-700">
           <form>
             <label htmlFor="username">Username:</label>
@@ -98,6 +93,5 @@ export default async function Home({
           </Link>
         </div>
       </div>
-    </div>
   );
 }
