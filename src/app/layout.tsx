@@ -18,7 +18,7 @@ export default function RootLayout({
         <header className="py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="container mx-auto flex justify-between items-center">
             <div>
-              <Link className="text-white font-bold text-lg" href="/">
+              <Link className="text-white font-bold text-lg" href="https://nextjs.ai/">
                 <svg
                   className="fill-current h-8 w-8 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ export default function RootLayout({
             </div>
             <div>
               <h1 className="text-4xl font-bold text-center">
-                NextJS AI Starter
+                GPT Access Control Demo
               </h1>
             </div>
             <div></div>
