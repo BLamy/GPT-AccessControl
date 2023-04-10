@@ -3,6 +3,9 @@ import { ChatCompletionRequestMessage } from "openai";
 import { generateChatCompletion } from "@/lib/ChatCompletion";
 import Link from "next/link";
 
+// Force dynamic is required to use URLSearchParams 
+// otherwise it will cache my new rule since i'm sending it as a GET param 
+export const dynamic = "force-dynamic";
 export default async function Home({
   searchParams,
 }: {
@@ -53,7 +56,7 @@ export default async function Home({
               name="username"
               type="text"
               placeholder="Username"
-              className={`input input-bordered w-full max-w-xs ${
+              className={`input input-bordered w-full max-w-xs text-white ${
                 isInvalidUsername ? "input-error" : ""
               }`}
             />
