@@ -5,6 +5,9 @@ import Chat from "@/components/Chat";
 import { createPullRequest } from "@/lib/Github";
 import chalk from "chalk";
 
+// Force dynamic is required to use URLSearchParams 
+// otherwise it will cache my new rule since i'm sending it as a GET param 
+export const dynamic = "force-dynamic";
 export default async function Admin({
   searchParams,
 }: {
