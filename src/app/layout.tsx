@@ -32,7 +32,7 @@ export default function RootLayout({
             </div>
             <div>
               <h1 className="text-4xl font-bold text-center">
-                GPT Access Control Demo
+                GPT Access Control
               </h1>
             </div>
             <div></div>
