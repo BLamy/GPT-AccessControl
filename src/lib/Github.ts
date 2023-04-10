@@ -12,8 +12,9 @@ function commitTitleToBranchName(title: string) {
     .replace(/[^\w\s-]/g, "") // Remove special characters except hyphens
     .replace(/[\s]+/g, "-") // Replace spaces with hyphens
     .replace(/^-+|-+$/g, ""); // Remove leading and trailing hyphens
-
-  return branchName;
+  const currentDate = new Date();
+  const timestamp = currentDate.getTime();
+  return branchName + "-" + timestamp;
 }
 
 export const createPullRequest = (
