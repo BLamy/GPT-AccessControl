@@ -41,10 +41,10 @@ export default async function Admin({
     const newRules = JSON.stringify(JSON.parse(match[1]), null, 2);
 
     const pr = await createPullRequest(naturalLangaugeQuery, newLogs, newRules);
-    console.log(chalk.green(`PR: ${pr?.data.url}`));
+    console.log(chalk.green(`PR: ${pr?.data.html_url}`));
     prLink = (
       <p>
-        PR created: <a href={pr?.data.url}>{pr?.data.url}</a>
+        PR created: <a href={pr?.data.html_url}>{pr?.data.html_url}</a>
       </p>
     );
   }
