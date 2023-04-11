@@ -1,0 +1,35 @@
+name: Change Rules Form
+description: Fill out this form to submit a PR with modified rules
+title: "[RuleChange]: "
+labels: ["rule-change"]
+body:
+- type: input
+  id: username
+  attributes:
+    label: Username
+    description: Enter your username
+    placeholder: ex. octocat
+  validations:
+    required: true
+- type: dropdown
+  id: role
+  attributes:
+    label: Role
+    description: Select your role
+    options:
+    - public
+    - admin
+    - employee
+  validations:
+    required: true
+- type: dropdown
+  id: action
+  attributes:
+    label: Action
+    description: Select the action you want to perform
+    options:
+    - public
+    - confidential
+    - non_confidential
+  validations:
+    required: true
